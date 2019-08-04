@@ -16,7 +16,7 @@
 	<div id="note">
 		<img src="img.jpg" alt="" class="pic">
 	</div>
-	<script src="like.min.js"></script>
+	<script src="like.min.2.js"></script>
 	<script>
 		var note = document.getElementById('note');
 		note.onclick = function (argument) {
@@ -24,7 +24,8 @@
 				el:note,
 	            width:note.offsetWidth,
 	            height:note.offsetHeight,
-	            cb:doAfter
+	            cb:doAfter,
+	            pic:false
 			});
 			like.init();
 		}
