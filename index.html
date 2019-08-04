@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>heartAnimation</title>
+	<style>
+	* { padding: 0; margin: 0; }
+	img.pic { display: block; width: 100%; }
+	#note { width: 40%; }
+	#note { position: relative; }
+	#note canvas { position: absolute; top: 0; left: 0; }
+	</style>
+</head>
+<body>
+	<div id="note">
+		<img src="img.jpg" alt="" class="pic">
+	</div>
+	<script src="like.min.js"></script>
+	<script>
+		var note = document.getElementById('note');
+		note.onclick = function (argument) {
+			var like = new heartAnimation({
+				el:note,
+	            width:note.offsetWidth,
+	            height:note.offsetHeight,
+	            cb:doAfter
+			});
+			like.init();
+		}
+
+		function doAfter(){
+			console.log('it is ok',111);
+		}
+		
+	</script>
+</body>
+</html>
